@@ -189,12 +189,19 @@
     prog.querySelector('.prog-bar i').style.width = (c.total ? c.done / c.total * 100 : 0) + '%';
 
     var up = upcoming(act, 2), n = up[0], then = up[1];
-    nextEl.hidden = !n;
-    if (n) {
-      nextEl.querySelector('.next-zone').textContent = n.zone.n;
-      nextEl.querySelector('.next-text').innerHTML = fmt(n.step.text);
-      nextEl.dataset.id = n.step.id;
-    }
+    // Everything before the next step is done, so "back" unticks the one right before it.
+    var shown = actSteps(act).filter(visible);
+    var at = n ? shown.indexOf(n.step) : shown.length;
+    var prev = at > 0 ? shown[at - 1] : null;
+
+    nextEl.hidden = !n && !prev;
+    nextEl.querySelector('.next-zone').textContent = n ? n.zone.n : '';
+    nextEl.querySelector('.next-text').innerHTML = n ? fmt(n.step.text) : 'Act complete';
+    nextEl.dataset.id = n ? n.step.id : '';
+    nextEl.dataset.prev = prev ? prev.id : '';
+    $('next-btn').hidden = !n;
+    $('back-btn').hidden = !prev;
+
     var thenEl = nextEl.querySelector('.next-then');
     thenEl.hidden = !then;
     if (then) {
@@ -249,6 +256,7 @@
   });
 
   $('next-btn').addEventListener('click', function () { toggleStep($('next').dataset.id); });
+  $('back-btn').addEventListener('click', function () { toggleStep($('next').dataset.prev); });
   $('next').querySelector('.next-text').addEventListener('click', function () {
     var el = document.querySelector('.step[data-id="' + $('next').dataset.id + '"]');
     if (el) el.scrollIntoView({ block: 'center', behavior: 'smooth' });

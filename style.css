@@ -146,6 +146,13 @@ a { color: var(--accent); }
   background: var(--accent); color: var(--accent-ink); font-size: 1.2rem; font-weight: 700;
 }
 .next-btn:hover { filter: brightness(1.1); }
+.back-btn {
+  flex: none; margin-right: -0.4rem;
+  width: 2.6rem; height: 2.6rem; border-radius: 8px;
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  color: var(--accent); font-size: 1.5rem; line-height: 1;
+}
+.back-btn:hover { background: color-mix(in srgb, var(--accent) 15%, transparent); }
 
 /* ── Content ─────────────────────────────── */
 main { max-width: 760px; margin: 0 auto; padding: 1rem 16px 2rem; }
