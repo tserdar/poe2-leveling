@@ -207,7 +207,6 @@
     renderTabs();
     renderHeader(act);
     $('main').innerHTML = act ? renderAct(act) : renderTips();
-    $('reset').hidden = !act;
   }
 
   /* ── Events ────────────────────────────── */

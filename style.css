@@ -103,6 +103,7 @@ a { color: var(--accent); }
 .prog { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--muted); font-variant-numeric: tabular-nums; }
 .prog-bar { width: 80px; height: 4px; border-radius: 2px; background: var(--line); overflow: hidden; }
 .prog-bar i { display: block; height: 100%; width: 0; background: var(--accent); transition: width 0.2s; }
+#reset:hover { color: var(--warn); border-color: var(--warn); }
 
 .next {
   max-width: 728px; margin: 0 auto 0.6rem; padding: 0.65rem 0.9rem;
