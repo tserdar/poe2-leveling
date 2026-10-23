@@ -10,6 +10,11 @@
   --perm: #8fbf6a;
   --warn: #e07a5f;
   --tip: #8fa9c4;
+  --skill: #22d3ee;
+  --support: #5eead4;
+  --fire: #f0605a;
+  --cold: #5b9cf0;
+  --lightning: #f59e3b;
   font-size: 15px;
 }
 :root[data-theme="light"] {
@@ -24,6 +29,11 @@
   --perm: #3f7d2a;
   --warn: #b5482c;
   --tip: #3d6489;
+  --skill: #0284c7;
+  --support: #0d9373;
+  --fire: #c0392b;
+  --cold: #1d5fc4;
+  --lightning: #c2650a;
 }
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
@@ -38,6 +48,11 @@
     --perm: #3f7d2a;
     --warn: #b5482c;
     --tip: #3d6489;
+    --skill: #0284c7;
+    --support: #0d9373;
+    --fire: #c0392b;
+    --cold: #1d5fc4;
+    --lightning: #c2650a;
   }
 }
 
@@ -163,9 +178,26 @@ main { max-width: 760px; margin: 0 auto; padding: 1rem 16px 2rem; }
 .chip {
   display: inline-block; font-size: 0.75rem; line-height: 1.3;
   padding: 0 0.35rem; margin-left: 0.25rem; border-radius: 4px;
-  color: var(--muted); border: 1px solid var(--line); white-space: nowrap;
+  --c: var(--muted);
+  color: var(--c); border: 1px solid color-mix(in srgb, var(--c) 40%, transparent); white-space: nowrap;
 }
-.chip.perm { color: var(--perm); border-color: color-mix(in srgb, var(--perm) 45%, transparent); font-weight: 600; }
+.chip.perm { --c: var(--perm); font-weight: 600; background: color-mix(in srgb, var(--c) 12%, transparent); }
+.chip.k-skill     { --c: var(--skill); }
+.chip.k-support   { --c: var(--support); }
+.chip.k-flask,
+.chip.k-fire      { --c: var(--fire); }
+.chip.k-cold      { --c: var(--cold); }
+.chip.k-lightning { --c: var(--lightning); }
+.chip.k-res {
+  --c: var(--muted);
+  border-color: color-mix(in srgb, var(--cold) 50%, transparent);
+  border-left-color: color-mix(in srgb, var(--fire) 60%, transparent);
+  border-right-color: color-mix(in srgb, var(--lightning) 60%, transparent);
+}
+.chip .grad {
+  background: linear-gradient(90deg, var(--fire), var(--cold), var(--lightning));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
 .perm-row .chip { margin-left: 0; }
 
 .note { font-size: 0.85rem; color: var(--tip); padding: 0.1rem 0 0; }

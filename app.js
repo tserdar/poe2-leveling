@@ -24,10 +24,27 @@
   function esc(s) {
     return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; });
   }
+  // Reward category → color class. First match wins.
+  var KINDS = [
+    [/Support Gem/, 'support'],
+    [/Skill Gem/, 'skill'],
+    [/Flask/i, 'flask'],
+    [/Fire Res/, 'fire'],
+    [/Cold Res/, 'cold'],
+    [/Lightning Res/, 'lightning'],
+    [/\bRes\b/, 'res']
+  ];
+  function chip(text, perm) {
+    var kind = '';
+    for (var i = 0; i < KINDS.length; i++) if (KINDS[i][0].test(text)) { kind = KINDS[i][1]; break; }
+    var cls = 'chip' + (perm ? ' perm' : '') + (kind ? ' k-' + kind : '');
+    // Mixed resistances get a gradient label, which needs its own element.
+    return '<span class="' + cls + '">' + (kind === 'res' ? '<span class="grad">' + text + '</span>' : text) + '</span>';
+  }
   function fmt(s) {
     return esc(s)
-      .replace(/\[\[(.+?)\]\]/g, '<span class="chip perm">$1</span>')
-      .replace(/\[(.+?)\]/g, '<span class="chip">$1</span>')
+      .replace(/\[\[(.+?)\]\]/g, function (m, t) { return chip(t, true); })
+      .replace(/\[(.+?)\]/g, function (m, t) { return chip(t, false); })
       .replace(/\*(.+?)\*/g, '<b>$1</b>');
   }
 
@@ -113,7 +130,7 @@
     var next = nextStep(act);
     var h = '<section class="act-head"><h1>' + esc(act.name) + '</h1>' +
       '<div class="act-meta">' + esc(act.span) + ' · Lvl ' + esc(act.lvl) + '</div>' +
-      '<div class="perm-row">' + act.perm.map(function (p) { return '<span class="chip perm">' + esc(p) + '</span>'; }).join('') + '</div>' +
+      '<div class="perm-row">' + act.perm.map(function (p) { return chip(esc(p), true); }).join('') + '</div>' +
       '<div class="act-tips">' + notesHtml(act.tips.map(function (t) { return { text: t }; })) + '</div></section>';
 
     act.zones.forEach(function (z) {
