@@ -73,16 +73,22 @@
     for (var i = 0; i < ACTS.length; i++) if (ACTS[i].id === state.act) return ACTS[i];
     return null;
   }
-  function nextStep(act) {
+  // The first `count` visible, unfinished steps of an act.
+  function upcoming(act, count) {
+    var out = [];
     for (var i = 0; i < act.zones.length; i++) {
       var z = act.zones[i];
       for (var j = 0; j < z.steps.length; j++) {
         var s = z.steps[j];
-        if (visible(s) && !state.done[s.id]) return { zone: z, step: s };
+        if (visible(s) && !state.done[s.id]) {
+          out.push({ zone: z, step: s });
+          if (out.length === count) return out;
+        }
       }
     }
-    return null;
+    return out;
   }
+  function nextStep(act) { return upcoming(act, 1)[0] || null; }
 
   /* ── Render ────────────────────────────── */
   function notesHtml(notes) {
@@ -154,12 +160,19 @@
     prog.querySelector('.prog-n').textContent = c.done + '/' + c.total;
     prog.querySelector('.prog-bar i').style.width = (c.total ? c.done / c.total * 100 : 0) + '%';
 
-    var n = nextStep(act);
+    var up = upcoming(act, 2), n = up[0], then = up[1];
     nextEl.hidden = !n;
     if (n) {
       nextEl.querySelector('.next-zone').textContent = n.zone.n;
       nextEl.querySelector('.next-text').innerHTML = fmt(n.step.text);
       nextEl.dataset.id = n.step.id;
+    }
+    var thenEl = nextEl.querySelector('.next-then');
+    thenEl.hidden = !then;
+    if (then) {
+      // Only name the zone when the step after this one moves to a new zone.
+      thenEl.querySelector('.next-then-zone').textContent = then.zone === n.zone ? '' : then.zone.n + ' · ';
+      thenEl.querySelector('.next-then-text').innerHTML = fmt(then.step.text);
     }
   }
 
