@@ -112,7 +112,7 @@
   function renderAct(act) {
     var next = nextStep(act);
     var h = '<section class="act-head"><h1>' + esc(act.name) + '</h1>' +
-      '<div class="act-meta">' + esc(act.span) + ' · lvl ' + esc(act.lvl) + '</div>' +
+      '<div class="act-meta">' + esc(act.span) + ' · Lvl ' + esc(act.lvl) + '</div>' +
       '<div class="perm-row">' + act.perm.map(function (p) { return '<span class="chip perm">' + esc(p) + '</span>'; }).join('') + '</div>' +
       '<div class="act-tips">' + notesHtml(act.tips.map(function (t) { return { text: t }; })) + '</div></section>';
 
@@ -125,7 +125,7 @@
       var complete = c.total > 0 && c.done === c.total;
       var fold = state.fold[z.key];
       var collapsed = fold ? fold === 'closed' : complete;
-      var badges = (z.town ? '<span class="badge">town</span>' : '') + (z.wp ? '<span class="badge">wp</span>' : '');
+      var badges = (z.town ? '<span class="badge">Town</span>' : '') + (z.wp ? '<span class="badge">WP</span>' : '');
 
       h += '<section class="zone' + (complete ? ' complete' : '') + (collapsed ? ' collapsed' : '') + '" data-zone="' + z.key + '">' +
         '<button class="zone-h" aria-expanded="' + !collapsed + '"><span class="zone-name">' + esc(z.n) + '</span>' + badges +
@@ -142,7 +142,7 @@
       h += '</ul></section>';
     });
 
-    if (state.hideDone && !next) h += '<p class="empty">All done here.</p>';
+    if (state.hideDone && !next) h += '<p class="empty">All done here</p>';
     return h;
   }
 
