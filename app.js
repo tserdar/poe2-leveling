@@ -154,7 +154,7 @@
       z.steps.forEach(function (s) {
         var cls = 'step' + (s.opt ? ' opt' : '') + (state.done[s.id] ? ' done' : '') + (next && next.step === s ? ' current' : '');
         h += '<li class="' + cls + '" data-id="' + s.id + '"><span class="box"></span><div class="body"><div class="txt">' +
-          (s.opt ? '<span class="opt-tag">opt</span>' : '') + fmt(s.text) + '</div>' + notesHtml(s.notes) + '</div></li>';
+          (s.opt ? '<span class="opt-tag">(Optional)</span>' : '') + fmt(s.text) + '</div>' + notesHtml(s.notes) + '</div></li>';
       });
       h += '</ul></section>';
     });
