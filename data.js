@@ -22,7 +22,7 @@ window.ROUTE = [
   zones: [
     { n: 'Riverbank', lv: '1', s: [
       'Wounded Man → starter weapon',
-      'Open big chests, slot gems',
+      'Find chest, slot gem',
       'Kill *Bloated Miller*, town is behind him'
     ]},
     { n: 'Clearfell Encampment', town: 1, s: [
