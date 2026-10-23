@@ -41,14 +41,18 @@
     [/Rare|Unique|weapon/i, 'gear'],
     [/Orb\b|Whetstone|Essence|Currency|Gold/, 'currency']
   ];
-  function chip(text, perm) {
+  // `text` must already be escaped. `extra` turns the chip into a button
+  // with extra classes/attributes (used by the act rewards panel).
+  function chip(text, perm, extra) {
     var kind = '';
     for (var i = 0; i < KINDS.length; i++) {
       if ((!perm || KINDS[i][2]) && KINDS[i][0].test(text)) { kind = KINDS[i][1]; break; }
     }
-    var cls = 'chip' + (perm ? ' perm' : '') + (kind ? ' k-' + kind : '');
+    var cls = 'chip' + (perm ? ' perm' : '') + (kind ? ' k-' + kind : '') + (extra ? ' ' + extra.cls : '');
+    var tag = extra ? 'button' : 'span';
     // Mixed resistances get a gradient label, which needs its own element.
-    return '<span class="' + cls + '">' + (kind === 'res' ? '<span class="grad">' + text + '</span>' : text) + '</span>';
+    return '<' + tag + ' class="' + cls + '"' + (extra ? ' ' + extra.attrs : '') + '>' +
+      (kind === 'res' ? '<span class="grad">' + text + '</span>' : text) + '</' + tag + '>';
   }
   function fmt(s) {
     return esc(s)
@@ -79,7 +83,11 @@
         var id = base;
         seen[base] = (seen[base] || 0) + 1;
         if (seen[base] > 1) id = base + '-' + seen[base];
-        z.steps.push({ id: id, text: text, opt: opt, notes: [] });
+        var rewards = [];
+        text.replace(/\[\[(.+?)\]\]|\[(.+?)\]/g, function (m, p, r) {
+          rewards.push({ text: p || r, perm: !!p });
+        });
+        z.steps.push({ id: id, text: text, opt: opt, notes: [], rewards: rewards });
       });
     });
   });
@@ -135,11 +143,33 @@
     $('tabs').innerHTML = html;
   }
 
+  // Every reward of the visible steps, split into permanent and other.
+  // Each chip links to the step it comes from; obtained ones get a tick.
+  function rewardsHtml(act) {
+    var rows = { perm: [], loot: [] };
+    actSteps(act).filter(visible).forEach(function (s) {
+      var got = !!state.done[s.id];
+      s.rewards.forEach(function (r) {
+        rows[r.perm ? 'perm' : 'loot'].push({ got: got, html: chip(esc(r.text), r.perm, {
+          cls: 'rw' + (got ? ' got' : ''),
+          attrs: 'data-goto="' + s.id + '" title="' + (got ? 'Obtained · ' : '') + 'Show step"'
+        }) });
+      });
+    });
+    function row(label, items) {
+      if (!items.length) return '';
+      var got = items.filter(function (i) { return i.got; }).length;
+      return '<div class="rw-row"><span class="rw-k">' + label + ' <span class="rw-n">' + got + '/' + items.length + '</span></span>' +
+        items.map(function (i) { return i.html; }).join('') + '</div>';
+    }
+    return '<div class="rewards">' + row('Permanent', rows.perm) + row('Loot', rows.loot) + '</div>';
+  }
+
   function renderAct(act) {
     var next = nextStep(act);
     var h = '<section class="act-head"><h1>' + esc(act.name) + '</h1>' +
       '<div class="act-meta">' + esc(act.span) + ' · Lvl ' + esc(act.lvl) + '</div>' +
-      '<div class="perm-row">' + act.perm.map(function (p) { return chip(esc(p), true); }).join('') + '</div>' +
+      rewardsHtml(act) +
       '<div class="act-tips">' + notesHtml(act.tips.map(function (t) { return { text: t }; })) + '</div></section>';
 
     act.zones.forEach(function (z) {
@@ -242,7 +272,25 @@
     window.scrollTo(0, 0);
   });
 
+  // Open the step's zone, scroll to it and flash it. `reveal` keeps it visible
+  // even when "Hide done" would hide it.
+  function gotoStep(id) {
+    var act = currentAct();
+    act.zones.forEach(function (z) {
+      if (z.steps.some(function (s) { return s.id === id; })) state.fold[z.key] = 'open';
+    });
+    save();
+    render();
+    var el = document.querySelector('.step[data-id="' + id + '"]');
+    if (!el) return;
+    el.classList.add('reveal', 'flash');
+    el.closest('.zone').classList.add('reveal');
+    el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  }
+
   $('main').addEventListener('click', function (e) {
+    var rw = e.target.closest('[data-goto]');
+    if (rw) { gotoStep(rw.dataset.goto); return; }
     var head = e.target.closest('.zone-h');
     if (head) {
       var zone = head.parentNode;

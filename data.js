@@ -18,7 +18,6 @@
 window.ROUTE = [
 {
   id: 'a1', tab: 'I', name: 'Act I', span: 'Clearfell → Ogham', lvl: '1–14',
-  perm: ['+4 Skill Points', '+10% Cold Res', '+30 Spirit', '+20 Life', 'Salvage Bench'],
   tips: [
     'Reset the Cemetery after Draven; Asinia then drops at the higher zone level',
     'Aim for Lvl 14 before Geonor'
@@ -127,7 +126,6 @@ window.ROUTE = [
 },
 {
   id: 'a2', tab: 'II', name: 'Act II', span: 'Vastiri → Dreadnought', lvl: '14–29',
-  perm: ['+4 Skill Points', '+10% Lightning Res', '+1 Charm Slot', '1st Ascendancy'],
   tips: [
     'Mastodon Badlands before Keth → Kabala drops a Lv7 gem',
     'Skip Balbala; use the Deshar vulture Barya and ascend at Lvl 28',
@@ -257,7 +255,6 @@ window.ROUTE = [
 },
 {
   id: 'a3', tab: 'III', name: 'Act III', span: 'Sandswept → Ziggurat', lvl: '30–42',
-  perm: ['+4 Skill Points', '+10% Fire Res', '+30 Spirit', 'Reforging Bench', '2nd Ascendancy', 'Servi pick'],
   tips: [
     'Servi\'s pick is permanent; most take Stun Threshold',
     'Explorer camps sell guaranteed rares',
@@ -411,7 +408,6 @@ window.ROUTE = [
 },
 {
   id: 'a4', tab: 'IV', name: 'Act IV', span: 'Kingsmarch → Ngakanu', lvl: '42–52',
-  perm: ['+4 Skill Points', '+5% Max Mana', 'Tattoo', 'Hideout', 'Verisium Anvil'],
   tips: [
     'The island with fragments + Matiki varies per league; Kingsmarch dialogue says where',
     'Matiki is caged on an island; click the cage',
@@ -513,7 +509,6 @@ window.ROUTE = [
 },
 {
   id: 'in', tab: 'V', name: 'Interludes', span: 'Ogham · Khari · Kriar', lvl: '52–58',
-  perm: ['+8 Skill Points', '+5% Max Life', '+40 Spirit', 'Free unique', 'Boon'],
   tips: [
     'Any order; suggested Kriar → Ogham → Khari (Spirit spike first)',
     'Res penalty applies on entry; don\'t scout',

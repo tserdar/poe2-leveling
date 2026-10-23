@@ -160,7 +160,10 @@ main { max-width: 760px; margin: 0 auto; padding: 1rem 16px 2rem; }
 .act-head { margin: 0.5rem 0 1rem; }
 .act-head h1 { font-size: 1.35rem; font-weight: 650; }
 .act-meta { color: var(--muted); font-size: 0.85rem; margin-top: 0.1rem; }
-.perm-row { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.6rem; }
+.rewards { margin-top: 0.7rem; display: grid; gap: 0.4rem; }
+.rw-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem; }
+.rw-k { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 650; min-width: 6.5rem; }
+.rw-n { color: var(--dim); font-weight: 500; letter-spacing: 0; }
 .act-tips { margin-top: 0.75rem; }
 
 .zone { border-top: 1px solid var(--line); }
@@ -232,7 +235,13 @@ main { max-width: 760px; margin: 0 auto; padding: 1rem 16px 2rem; }
   background: linear-gradient(90deg, var(--fire), var(--cold), var(--lightning));
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
-.perm-row .chip { margin-left: 0; }
+.rewards .chip { margin-left: 0; }
+.chip.rw { cursor: pointer; background: none; font-weight: 500; }
+.chip.rw:hover { border-color: var(--c); }
+.chip.rw.got { background: color-mix(in srgb, var(--c) 22%, transparent); border-color: color-mix(in srgb, var(--c) 70%, transparent); font-weight: 600; }
+.chip.rw.got::before { content: "✓ "; }
+.chip.rw:not(.got) { opacity: 0.75; }
+.chip.rw:not(.got):hover { opacity: 1; }
 
 .note { font-size: 0.85rem; color: var(--tip); padding: 0.1rem 0 0; }
 .note.warn { color: var(--warn); }
@@ -279,4 +288,13 @@ body.hide-done .zone.complete { display: none; }
   .tab { padding: 0.3rem 0.55rem; }
   .chip { white-space: normal; }
   .next-text { font-size: 1.1rem; }
+}
+
+/* Step jumped to from the rewards panel */
+body.hide-done .step.reveal { display: flex; }
+body.hide-done .zone.reveal { display: block; }
+.step.flash { animation: flash 1.6s ease-out; }
+@keyframes flash {
+  0%, 35% { background: color-mix(in srgb, var(--accent) 28%, transparent); }
+  100% { background: transparent; }
 }

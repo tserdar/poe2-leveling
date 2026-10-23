@@ -5,6 +5,7 @@ A minimal Path of Exile 2 campaign tracker. Acts I–IV plus the Interludes, one
 - Optional steps and tips are hidden until you turn them on.
 - A "Next" bar shows the next step and marks it done in one click.
 - Finished zones fold away.
+- Each act lists its rewards, ticked when obtained; click one to jump to its step.
 - Progress is saved in your browser. Copy/paste a code to move it to another device.
 
 ## Credit
