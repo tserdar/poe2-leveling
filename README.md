@@ -39,7 +39,7 @@ Each zone in `data.js` holds a list of strings:
 | `[x]`        | reward                           |
 | `[[x]]`      | permanent reward                 |
 
-Step IDs are hashes of zone + text, so rewording a step resets its checkbox.
+Step IDs are hashes of zone + text (ignoring case and punctuation), so changing the words of a step resets its checkbox, but fixing capitalization or punctuation does not.
 
 ## Deploy (GitHub Pages)
 

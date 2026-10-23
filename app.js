@@ -47,7 +47,9 @@
         }
         var opt = kind === '? ';
         var text = opt ? line.slice(2) : line;
-        var base = act.id + '-' + hash(z.n + '|' + text);
+        // Ignore case and punctuation so copy-edits don't reset saved ticks.
+        var key = (z.n + '|' + text).toLowerCase().replace(/[^a-z0-9|]+/g, '');
+        var base = act.id + '-' + hash(key);
         var id = base;
         seen[base] = (seen[base] || 0) + 1;
         if (seen[base] > 1) id = base + '-' + seen[base];
