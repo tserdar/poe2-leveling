@@ -7,7 +7,7 @@ Forked from domistae/poe2-leveling (MIT) — keep the attribution in the footer,
 - `app.js` — parses `data.js`, renders, stores state in localStorage key `poe2route:v1`.
 - `style.css` — color tokens on `:root`, light theme via `[data-theme="light"]` / `prefers-color-scheme`.
 
-Writing style for steps: terse, no filler. "WP next to Mud Burrow", not "A waypoint sits right next to Mud Burrow".
+Writing style for steps: short, no filler, but each line must make sense on its own to someone who has never read the original guide. "Waypoint right next to Mud Burrow", not "A waypoint sits right next to Mud Burrow" and not "WP by burrow".
 Don't copy text verbatim from the upstream guide.
 
 ## Writing rules
@@ -15,6 +15,7 @@ Don't copy text verbatim from the upstream guide.
 - Sentence case: every step, tip and reward starts with a capital. In-game names keep their in-game capitals (The Hooded One, Uncut Skill Gem, Artificer's Orb, Cold Res, Spirit).
 - Generic things stay lowercase: chest, altar, corpse, rare belt, gold chests.
 - No trailing periods. Join two clauses with `;`. Questions keep `?`.
-- Symbols: `→` then/leads to · `·` or / list · `+` together with · `×2` repeat · `–` ranges · `~` about.
-- Abbreviations: WP, XP, AoE, Lvl 28 (character/zone level), Lv5 (gem level), 1st char only. Compass in caps: (N), (SE).
+- Symbols: `→` then/leads to · `·` or / list · `–` ranges · `~` about. Write "twice", "and" in words.
+- Spell out words in step text: "waypoint", "teleport", "first character only", directions as (north), (south-east). Keep only common abbreviations: XP, AoE, Lvl 28 (character/zone level), Lv5 (gem level).
+- Say the action: "Talk to X", "Enter X", "Kill X", "Loot X" rather than a bare name.
 - Boss kills start with "Kill" (or "Zone: kill X").
