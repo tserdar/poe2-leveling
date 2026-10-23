@@ -15,6 +15,12 @@
   --fire: #f0605a;
   --cold: #5b9cf0;
   --lightning: #f59e3b;
+  --spirit: #e4e4e7;
+  --currency: #d4a72c;
+  --rune: #7cc4fa;
+  --jewel: #fde047;
+  --gear: #d2865a;
+  --charm: #6b7ff0;
   font-size: 15px;
 }
 :root[data-theme="light"] {
@@ -34,6 +40,12 @@
   --fire: #c0392b;
   --cold: #1d5fc4;
   --lightning: #c2650a;
+  --spirit: #52525b;
+  --currency: #a07a10;
+  --rune: #2b8ad6;
+  --jewel: #8a7e00;
+  --gear: #a0522d;
+  --charm: #1e40af;
 }
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
@@ -53,6 +65,12 @@
     --fire: #c0392b;
     --cold: #1d5fc4;
     --lightning: #c2650a;
+    --spirit: #52525b;
+    --currency: #a07a10;
+    --rune: #2b8ad6;
+    --jewel: #8a7e00;
+    --gear: #a0522d;
+    --charm: #1e40af;
   }
 }
 
@@ -191,6 +209,12 @@ main { max-width: 760px; margin: 0 auto; padding: 1rem 16px 2rem; }
 .chip.k-fire      { --c: var(--fire); }
 .chip.k-cold      { --c: var(--cold); }
 .chip.k-lightning { --c: var(--lightning); }
+.chip.k-spirit    { --c: var(--spirit); }
+.chip.k-currency  { --c: var(--currency); }
+.chip.k-rune      { --c: var(--rune); }
+.chip.k-jewel     { --c: var(--jewel); }
+.chip.k-gear      { --c: var(--gear); }
+.chip.k-charm     { --c: var(--charm); }
 .chip.k-res {
   --c: var(--muted);
   border-color: color-mix(in srgb, var(--cold) 50%, transparent);

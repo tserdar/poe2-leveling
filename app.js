@@ -24,19 +24,28 @@
   function esc(s) {
     return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; });
   }
-  // Reward category → color class. First match wins.
+  // Reward category → color class. First match wins. Permanent rewards stay
+  // green unless the third flag is set (resistances keep their element color).
   var KINDS = [
     [/Support Gem/, 'support'],
     [/Skill Gem/, 'skill'],
+    [/Spirit Gem/, 'spirit'],
     [/Flask/i, 'flask'],
-    [/Fire Res/, 'fire'],
-    [/Cold Res/, 'cold'],
-    [/Lightning Res/, 'lightning'],
-    [/\bRes\b/, 'res']
+    [/Fire Res/, 'fire', true],
+    [/Cold Res/, 'cold', true],
+    [/Lightning Res/, 'lightning', true],
+    [/\bRes\b/, 'res', true],
+    [/Rune/, 'rune'],
+    [/Ring|Amulet|Jewel/i, 'jewel'],
+    [/Charm/, 'charm'],
+    [/Rare|Unique|weapon/i, 'gear'],
+    [/Orb\b|Whetstone|Essence|Currency|Gold/, 'currency']
   ];
   function chip(text, perm) {
     var kind = '';
-    for (var i = 0; i < KINDS.length; i++) if (KINDS[i][0].test(text)) { kind = KINDS[i][1]; break; }
+    for (var i = 0; i < KINDS.length; i++) {
+      if ((!perm || KINDS[i][2]) && KINDS[i][0].test(text)) { kind = KINDS[i][1]; break; }
+    }
     var cls = 'chip' + (perm ? ' perm' : '') + (kind ? ' k-' + kind : '');
     // Mixed resistances get a gradient label, which needs its own element.
     return '<span class="' + cls + '">' + (kind === 'res' ? '<span class="grad">' + text + '</span>' : text) + '</span>';
