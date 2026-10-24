@@ -49,7 +49,7 @@ window.ROUTE = [
       '> Hardest early fight; chill her with Frost Bomb'
     ]},
     { n: 'The Red Vale', lv: '5–6', wp: 1, s: [
-      'Find the 3 Obelisks of Rust; loot each one',
+      'Find the 3 Obelisks of Rust; loot the Runed Girdle from each',
       'Kill *The Rust King*, who spawns at the last obelisk [Skill Gem Lv3]',
       '> Drag monster packs under him so your AoE hits both',
       '> Weapon racks here guarantee a tier-2 martial weapon',
@@ -80,7 +80,7 @@ window.ROUTE = [
       '> Repeatable by resetting the zone from the waypoint',
       'Tomb of the Consort: kill *Asinia* → loot her key piece',
       '? Haunted Treasure secret [Support Gem]',
-      'Open the Memorial Gate next to Lachlann → kill *Lachlann* [Skill Gem Lv3]',
+      'Open the Memorial Gate next to Lachlann → kill *Lachlann* [Ring] [Skill Gem Lv3]',
       'Exit to Hunting Grounds, take the waypoint → teleport to town'
     ]},
     { n: 'Clearfell Encampment', town: 1, s: [
@@ -119,7 +119,7 @@ window.ROUTE = [
       'Enter The Manor Ramparts'
     ]},
     { n: 'The Manor Ramparts', lv: '13', s: [
-      '? Cut the rope of the hanging man at the gallows near a checkpoint [Support Gem]',
+      '? Gallows near a checkpoint: click the rope on the hanging man [Support Gem]',
       '> Have a Lvl 10 flask and a Lvl 11 chest piece before the Manor',
       'Enter Ogham Manor'
     ]},
@@ -197,6 +197,7 @@ window.ROUTE = [
       'Kill hyenas until the Sun Clan Relic drops',
       '> Tall Goliath hyenas drop it more often',
       'Kill *Iktab & Ekbab* → loot the Mastodon Tusks',
+      '> Keep both relics for the altar in Valley of the Titans',
       'Teleport back to town'
     ]},
     { n: 'The Ardura Caravan', town: 1, s: [
@@ -214,7 +215,7 @@ window.ROUTE = [
       'Enter Buried Shrines'
     ]},
     { n: 'Buried Shrines', lv: '23', s: [
-      '? Guarded sarcophagus [Support Gem]',
+      '? Guarded sarcophagus [Support Gem] [Lesser Jeweller\'s Orb]',
       '? Make an offering (fire, water or lightning) [Res Ring]',
       'Enter The Heart of Keth'
     ]},
@@ -230,7 +231,7 @@ window.ROUTE = [
     { n: 'Valley of the Titans', lv: '25', wp: 1, s: [
       '> Each giant titan head has a path to one seal',
       'Activate the 3 Ancient Seals around the edge of the map',
-      'At the Relic Altar, place both relics [[+1 Charm Slot]]',
+      'Find the Medallion at the Relic Altar, then place both relics [[+1 Charm Slot]]',
       '> The altar is on a side path off one seal route; the charm bonus can be changed later',
       'Enter The Titan Grotto'
     ]},
@@ -329,6 +330,7 @@ window.ROUTE = [
     { n: 'Chimeral Wetlands', lv: '32–33', wp: 1, s: [
       '? Ravaged Camp: logbook and gold chest [Rare armour]',
       '? Toxic Bloom: kill the *Noxious Behemoth* [Amulet]',
+      '? League encounter [Skill Gem Lv9]',
       'Enter the Temple of Chaos, take its waypoint, come back',
       'Kill *Xyclucian, the Chimera* → loot the Inscribed Ultimatum',
       '? Clear the Vaal Beacon pack (4 of 6)',
@@ -345,6 +347,7 @@ window.ROUTE = [
       'Summon and talk to Alva',
       'Loot a Small Soul Core → place it in the stone altar next to Alva',
       'Collect the other Small Soul Cores (4 in total)',
+      '> One core opens the Sanctum; two open the Blackjaw door or a secret loot room',
       'Open the Blackjaw door → kill *Blackjaw, the Remnant* → use the Flame Core [[+10% Fire Res]]',
       'Open another door → enter Jiquani\'s Sanctum'
     ]},
@@ -369,7 +372,7 @@ window.ROUTE = [
     ]},
     { n: 'Azak Bog', lv: '33–34', wp: 1, s: [
       '? Flameskin rituals [Ignagduk\'s Harvest]',
-      'Kill *Ignagduk, the Bog Witch* → use the Gemrot Skull [[+30 Spirit]] [Spirit Gem Lv10]',
+      'Kill *Ignagduk, the Bog Witch* → use the Gemrot Skull [[+30 Spirit]] [Uncut Spirit Gem Lv10]',
       '> Her arena is always in the top-right corner',
       'Bring Ignagduk\'s spear to Servi in town [Charm]',
       'Teleport back to town'
@@ -446,7 +449,7 @@ window.ROUTE = [
   id: 'a4', tab: 'IV', name: 'Act IV', span: 'Kingsmarch → Ngakanu', lvl: '42–52',
   tips: [
     'Which islands hold the weapon fragments and Matiki changes each league; dialogue in Kingsmarch tells you',
-    'Matiki is locked in a cage on one of the islands; click the cage to free her',
+    'Matiki is locked in a cage on one of the islands; click the cage to free Matiki',
     'Greater Orbs of Transmutation and Augmentation can start dropping from here'
   ],
   zones: [
@@ -459,7 +462,7 @@ window.ROUTE = [
     { n: 'Whakapanu Island', lv: '42–43', s: [
       'Petrified Pirate on the coast [Map Piece 1 of 4]',
       '? Shark Pit: kill *The Great White One* → Shark Fin',
-      '> Give the fin to Kaimana [Uncut Gem Lv11] [Blessing]',
+      '> Give the fin to Kaimana (at Ngakanu, or on the docks after Tavakai) [Uncut Gem Lv11] [Blessing]',
       '? Crabshell Cavern: kill *Clawcrunch* [Support Gem Lv4]',
       'Enter Singing Caverns'
     ]},
@@ -573,7 +576,7 @@ window.ROUTE = [
       'Go through Blackwood → Holten',
       'Kill *Godwin & Sigbert* in Holten [Blacksmith\'s Whetstone]',
       '? Soul of the Ferryman at the docks in Holten [Cheap Greater Runes]',
-      'Wolvenhold: kill *Oswin, the Dread Warden* → use the Warden\'s Ledger [[+2 Skill Points]] [Unique]',
+      'Wolvenhold: kill *Oswin, the Dread Warden* → use the Warden\'s Ledger [[+2 Skill Points]] [Unique] [Vaal Orb]',
       'Holten Estate: climb two staircases → kill *Thane Wulfric & Lady Elswyth*',
       'Finish the interlude → return to town'
     ]},
@@ -592,14 +595,14 @@ window.ROUTE = [
       '> You can swap the boon later at the pillar',
       'Summon Jado to open Qimah Reservoir',
       '? Fill the 2 Sacred Wells with Vials of Sacred Water [Currency]',
-      '? Click the giant vase → kill *Bloodbilge* [Exalted Orb] [Vaal Orb]',
+      '? Click the giant vase → kill *Bloodbilge* [Exalted Orb] [Vaal Orb] [Skill Gem]',
       'Kill *Azmadi, the Faridun Prince* → use the Grand Barya',
       'Finish the interlude → return to town'
     ]},
     { n: '5.3 · Kriar', lv: '55–58', s: [
       'Talk to The Hooded One → travel to Mount Kriar → through The Glade into Ashen Forest (no waypoint)',
       'Find the Ancient Monument [Skill Gem]',
-      'Kriar Village: follow the wisps → kill *Lythara, the Wayward Spear* [[+40 Spirit]] [Spirit Gem]',
+      'Kriar Village: follow the wisps → kill *Lythara, the Wayward Spear* [[+40 Spirit]] [Spirit Gem] [Gemcrust Skull]',
       'Glacial Tarn → Howling Caves: kill *The Abominable Yeti* → loot the Icy Tusks',
       'Give the Icy Tusks to Hilda [[+2 Skill Points]]',
       'Back in Glacial Tarn, kill *Rakkar, the Frozen Talon* (north-west) → opens Kriar Peaks',
