@@ -170,10 +170,9 @@ window.ROUTE = [
       'Travel to Traitor\'s Passage'
     ]},
     { n: 'Traitor\'s Passage', lv: '17', s: [
-      'Use the Ancient Seal door and the Runic Seals',
-      '? Kill *Balbala, the Traitor* [Djinn Barya] [Uncut Skill Gem Lv6]',
+      '? Activate the 3 Runic Seals to open the Ancient Seal door → kill *Balbala, the Traitor* [Djinn Barya] [Uncut Skill Gem Lv6]',
       '> At the one fork: the branch hung with parchment leads to Balbala, the other is the exit',
-      '> Most builds skip her; the Deshar vultures give an easier Barya',
+      '> Most builds skip this fight; the Deshar vultures give an easier Barya',
       '? Bell Chest in a dead end',
       'Take the stairs up to The Halani Gates'
     ]},
