@@ -304,7 +304,7 @@ window.ROUTE = [
       '> Talk to explorers at camps; they mark the next area on your minimap',
       'Kill *Mighty Silverfist* [[+2 Skill Points]]',
       '! Dodge his slam sideways, not backwards',
-      'Ravaged corpse at the Jungle Grave → Servi offers a belt [Rare belt]',
+      '? Ravaged corpse at the Jungle Grave → Servi offers a belt [Rare belt]',
       '? Troubled Camp (Gwendolyn Albright) [Rare gloves]',
       '? Clear the Vaal Beacon pack (1 of 6)',
       'Take the waypoint near the crypts → enter The Venom Crypts'
