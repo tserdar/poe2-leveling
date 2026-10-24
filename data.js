@@ -301,6 +301,7 @@ window.ROUTE = [
       'Take the top exit to Jungle Ruins'
     ]},
     { n: 'Jungle Ruins', lv: '30–31', wp: 1, s: [
+      'Find and talk to Alva; take the waypoint near her',
       '> Talk to explorers at camps; they mark the next area on your minimap',
       'Kill *Mighty Silverfist* [[+2 Skill Points]]',
       '! Dodge his slam sideways, not backwards',
@@ -322,7 +323,6 @@ window.ROUTE = [
       'Go to Infested Barrens through Jungle Ruins'
     ]},
     { n: 'Infested Barrens', lv: '31–32', wp: 1, s: [
-      'Find and talk to Alva; take the waypoint near her',
       '? Troubled Camp (Sebastian Carroway) [Rare boots]',
       '? Clear the Vaal Beacon pack (3 of 6)',
       'Enter Chimeral Wetlands'
