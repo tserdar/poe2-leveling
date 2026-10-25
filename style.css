@@ -140,7 +140,13 @@ a { color: var(--accent); }
 .next.done .next-k { color: var(--perm); }
 .next-main { flex: 1; min-width: 0; overflow-wrap: anywhere; }
 .next-k { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 700; }
-.next-zone { color: var(--muted); font-weight: 500; text-transform: none; letter-spacing: 0; font-size: 0.8rem; margin-left: 0.35rem; }
+.next-zone {
+  color: var(--text); font-weight: 600; text-transform: none; letter-spacing: 0; font-size: 0.85rem;
+  margin-left: 0.4rem; padding: 0.05rem 0.45rem; border-radius: 4px;
+  background: color-mix(in srgb, var(--accent) 22%, transparent);
+}
+.next-zone:empty { display: none; }
+.next.done .next-zone { background: color-mix(in srgb, var(--perm) 22%, transparent); }
 .next-text { font-size: 1.2rem; font-weight: 600; line-height: 1.3; margin-top: 0.1rem; cursor: pointer; }
 .next-text b { color: var(--accent); }
 .next-text .chip { font-size: 0.8rem; vertical-align: 0.1rem; }
