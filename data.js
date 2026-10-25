@@ -334,7 +334,7 @@ window.ROUTE = [
       'Enter the Temple of Chaos, take its waypoint, come back',
       'Kill *Xyclucian, the Chimera* → loot the Inscribed Ultimatum',
       '? Clear the Vaal Beacon pack (4 of 6)',
-      'Enter Jiquani\'s Machinarium behind the boss'
+      'Enter Jiquani\'s Machinarium behind the boss, take waypoint'
     ]},
     { n: 'Trial of Chaos (when ready)', lv: '33+', s: [
       'Use the Inscribed Ultimatum at the trial entrance; pick mods you can handle',
