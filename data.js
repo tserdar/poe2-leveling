@@ -364,7 +364,7 @@ window.ROUTE = [
     ]},
     { n: 'The Matlan Waterways', lv: '35', s: [
       '? Narag\'s Hut: kill *Narag of the Vile Word* [Rare weapon] [Blacksmith\'s Whetstone]',
-      'Go to the end of the zone, pull lever, drain water out of the ancient city',
+      'Go to the end of the zone, pull lever, drain water out of the Drowned City',
       '? Clear the last Vaal Beacon pack (6 of 6) → portal to the Vaal Ruins',
       '> Enter the portal right away; it can disappear',
       '? Ravaged corpse at the Azak Bog entrance → Servi [Rare belt]',
