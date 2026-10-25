@@ -468,15 +468,14 @@ window.ROUTE = [
     ]},
     { n: 'Singing Caverns', wp: 1, s: [
       '? Beckoning Clam → Humming Pearl, give it to Rog',
-      'Kill *Diamora, Song of Death (Center of the area)*'
-    ]},
-    { n: 'Kingsmarch', town: 1, s: [
-      '? Talk to Ange → Shoreline Hideout; clear it, talk to Ange again [Hideout]'
+      'Kill *Diamora, Song of Death (Center of the area)*',
+      '? Back to Kingmarch to speak with Ange → Shoreline Hideout; clear it, talk to Ange again [Hideout]',
+      'Sail to Shrike Island'
     ]},
     { n: 'Shrike Island', lv: '43–44', s: [
       'Enter the Corpse Nest cave, usually late in the area with its own checkpoint [Map Piece 2 of 4]',
       'Kill *Scourge of the Skies*',
-      'Talk to The Hooded One → sail on'
+      'Talk to The Hooded One → sail to Abandoned Prison'
     ]},
     { n: 'Abandoned Prison', lv: '44', wp: 1, s: [
       'Kill monsters until the Chapel Key drops',
@@ -498,7 +497,7 @@ window.ROUTE = [
     { n: 'Volcanic Warrens', lv: '45–46', wp: 1, s: [
       '? Volcanic Nest: *Magma Twins*; kill lightning one first for a Ruby Ring, fire one first for a Topaz Ring',
       'Kill *Krutog, Lord of Kin* at The Tyrant Throne',
-      'Teleport to Kingsmarch'
+      'Teleport to Kingsmarch → sail to Eye of Hinekora'
     ]},
     { n: 'Eye of Hinekora', lv: '46–47', wp: 1, s: [
       'Talk to Matiki at the well (not in town), then click the well',
@@ -533,7 +532,8 @@ window.ROUTE = [
     ]},
     { n: 'Plunder\'s Point', s: [
       'Give all 4 map pieces to Makoru → sail → Dannig → Expedition → Deserted Post → summon Farrow [[Verisium Anvil]]',
-      '! Don\'t skip; this is the only way to unlock Runeforging'
+      '! Don\'t skip; this is the only way to unlock Runeforging',
+      'Teleport to Kingsmarch → sail to Arastas'
     ]},
     { n: 'Arastas', lv: '49–50', wp: 1, s: [
       'Talk to Missionari Lorandis → follow him → destroy the shield',
