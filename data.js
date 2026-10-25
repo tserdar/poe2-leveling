@@ -469,13 +469,13 @@ window.ROUTE = [
     { n: 'Singing Caverns', wp: 1, s: [
       '? Beckoning Clam → Humming Pearl, give it to Rog',
       'Kill *Diamora, Song of Death (Center of the area)*',
-      'Talk to The Hooded One → teleport to town'
+      'Teleport to town'
     ]},
     { n: 'Kingsmarch', town: 1, s: [
-      'Talk to Ange → Shoreline Hideout; clear it, talk to Ange again [[Hideout]]'
+      '? Talk to Ange → Shoreline Hideout; clear it, talk to Ange again [Hideout]'
     ]},
     { n: 'Shrike Island', lv: '43–44', s: [
-      'Corpse Nest with an impaled Karui [Map Piece 2 of 4]',
+      'Enter the Corpse Nest cave, usually late in the area with its own checkpoint [Map Piece 2 of 4]',
       'Kill *Scourge of the Skies*',
       'Talk to The Hooded One → sail on'
     ]},
