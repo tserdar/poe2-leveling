@@ -225,6 +225,7 @@
     var prev = at > 0 ? shown[at - 1] : null;
 
     nextEl.hidden = !n && !prev;
+    nextEl.classList.toggle('done', !n);
     nextEl.querySelector('.next-zone').textContent = n ? n.zone.n : '';
     nextEl.querySelector('.next-text').innerHTML = n ? fmt(n.step.text) : 'Act complete';
     nextEl.dataset.id = n ? n.step.id : '';

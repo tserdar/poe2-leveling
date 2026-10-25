@@ -132,6 +132,12 @@ a { color: var(--accent); }
   border-radius: 8px;
 }
 @media (max-width: 760px) { .next { margin-left: 16px; margin-right: 16px; } }
+.next.done {
+  background: color-mix(in srgb, var(--perm) 13%, var(--bg));
+  border-color: color-mix(in srgb, var(--perm) 35%, transparent);
+  border-left-color: var(--perm);
+}
+.next.done .next-k { color: var(--perm); }
 .next-main { flex: 1; min-width: 0; overflow-wrap: anywhere; }
 .next-k { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 700; }
 .next-zone { color: var(--muted); font-weight: 500; text-transform: none; letter-spacing: 0; font-size: 0.8rem; margin-left: 0.35rem; }
