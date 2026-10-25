@@ -481,7 +481,7 @@ window.ROUTE = [
     { n: 'Abandoned Prison', lv: '44', wp: 1, s: [
       'Kill monsters until the Chapel Key drops',
       '? Armoury (elite drops a jewel) and Forgotten Cells [Jewel]',
-      'Open the chapel → kill *Forael* → use the Goddess of Justice [Flask]',
+      'Open the chapel → kill *Forael* → use the Goddess of Justice [[Permanent buff]]',
       'Enter Solitary Confinement'
     ]},
     { n: 'Solitary Confinement', s: [
