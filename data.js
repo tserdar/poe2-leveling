@@ -468,7 +468,7 @@ window.ROUTE = [
     ]},
     { n: 'Singing Caverns', wp: 1, s: [
       '? Beckoning Clam → Humming Pearl, give it to Rog',
-      'Kill *Diamora, Song of Death*',
+      'Kill *Diamora, Song of Death (Center of the area)*',
       'Talk to The Hooded One → teleport to town'
     ]},
     { n: 'Kingsmarch', town: 1, s: [
