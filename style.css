@@ -151,6 +151,7 @@ a { color: var(--accent); }
 .next-text b { color: var(--accent); }
 .next-text .chip { font-size: 0.8rem; vertical-align: 0.1rem; }
 .next-then { font-size: 0.85rem; font-style: italic; color: var(--muted); margin-top: 0.25rem; }
+.next-then-label { color: var(--perm); }
 .next-then .chip { font-style: normal; font-size: 0.7rem; }
 .next-btn {
   flex: none;
