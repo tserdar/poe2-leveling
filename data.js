@@ -189,7 +189,7 @@ window.ROUTE = [
     { n: 'The Ardura Caravan', town: 1, s: [
       'Talk to Shambrin, Zarka and Asala',
       'Travel to the Trial of the Sekhemas, take the waypoint only (run it later at Lvl 28)',
-      'Teleport back to town → travel to Mastodon Badlands'
+      'Travel to Mastodon Badlands'
     ]},
     { n: 'Mastodon Badlands', lv: '19–20', s: [
       '> Doing this before Keth raises Keth\'s level, so Kabala drops a Lv7 gem',
