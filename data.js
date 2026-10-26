@@ -575,8 +575,8 @@ window.ROUTE = [
       'Go through Blackwood → Holten',
       '? Kill *Godwin & Sigbert* in Holten [Blacksmith\'s Whetstone]',
       '? Soul of the Ferryman at the docks in Holten [Cheap Greater Runes]',
-      'Wolvenhold: kill *Oswin, the Dread Warden* → use the Warden\'s Ledger [[+2 Skill Points]] [Unique] [Vaal Orb]',
-      'Holten Estate: climb two staircases → kill *Thane Wulfric & Lady Elswyth*',
+      'Enter Wolvenhold from Holten first → kill *Oswin, the Dread Warden* → use the Warden\'s Ledger [[+2 Skill Points]] [Unique] [Vaal Orb]',
+      'Back in Holten, enter Holten Estate → climb two staircases → kill *Thane Wulfric & Lady Elswyth*',
       'Finish the interlude → return to town'
     ]},
     { n: '5.2 · Khari', lv: '54–55', s: [
