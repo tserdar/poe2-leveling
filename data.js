@@ -29,14 +29,15 @@ window.ROUTE = [
       'Kill *The Bloated Miller*; the town entrance is behind him'
     ]},
     { n: 'Clearfell Encampment', town: 1, s: [
-      'Talk to Renly [Skill Gem]'
+      'Talk to Renly [Skill Gem]',
+      'Enter Clearfell'
     ]},
     { n: 'Clearfell', lv: '2–3', s: [
       'Kill *Beira of the Rotten Pack* (north side) [[+10% Cold Res]]',
       '? Enter Mud Burrow, kill *The Devourer* [Skill Gem Lv2]; then talk to Renly in town [Support Gem]',
       '> Waypoint right next to Mud Burrow',
-      '> The bridge leads on to The Grelwood',
-      '? Abandoned Stash inside the Mysterious Campsite [Skill Gem]'
+      '? Abandoned Stash inside the Mysterious Campsite [Skill Gem]',
+      'Cross the bridge → enter The Grelwood'
     ]},
     { n: 'The Grelwood', lv: '3–5', wp: 1, s: [
       '> Glowing roots all lead to the Tree of Souls',
@@ -46,7 +47,8 @@ window.ROUTE = [
       'Enter The Red Vale, take its waypoint, come back',
       '? Kill *Gerung, the Brambleghast* [Skill Gem Lv2]',
       '? Hut with a cauldron → kill *Areagne* [Support Gem] [Flasks]',
-      '> Hardest early fight; chill her with Frost Bomb'
+      '> Hardest early fight; chill her with Frost Bomb',
+      'Enter The Red Vale'
     ]},
     { n: 'The Red Vale', lv: '5–6', wp: 1, s: [
       'Find the 3 Obelisks of Rust; loot the Runed Girdle from each',
@@ -84,7 +86,8 @@ window.ROUTE = [
       'Exit to Hunting Grounds, take the waypoint → teleport to town'
     ]},
     { n: 'Clearfell Encampment', town: 1, s: [
-      'Talk to Finn, Una and The Hooded One (he can now identify items)'
+      'Talk to Finn, Una and The Hooded One (he can now identify items)',
+      'Teleport to Hunting Grounds'
     ]},
     { n: 'Hunting Grounds', lv: '10', wp: 1, s: [
       '? Talk to Delwyn (only starts the wisp side mechanic)',
@@ -186,7 +189,7 @@ window.ROUTE = [
     { n: 'The Ardura Caravan', town: 1, s: [
       'Talk to Shambrin, Zarka and Asala',
       'Travel to the Trial of the Sekhemas, take the waypoint only (run it later at Lvl 28)',
-      'Travel to Mastodon Badlands'
+      'Teleport back to town → travel to Mastodon Badlands'
     ]},
     { n: 'Mastodon Badlands', lv: '19–20', s: [
       '> Doing this before Keth raises Keth\'s level, so Kabala drops a Lv7 gem',
@@ -260,14 +263,16 @@ window.ROUTE = [
       'Use the Sisters of Garukhan shrine [[+10% Lightning Res]]',
       'Kill *Tor Gul*',
       '! One of the hardest fights in the act; cap your Lightning Res',
-      'Teleport to town → talk to Asala (twice)'
+      'Teleport to town → talk to Asala (twice)',
+      'Teleport to Trial of the Sekhemas'
     ]},
     { n: 'Trial of the Sekhemas', lv: '28', wp: 1, s: [
       'On entry, pick the Lvl 28 Djinn Barya manually (not the Lvl 22 default)',
       'Room priority: Ritual > Chalice > Hourglass > Gauntlet',
       '> Hourglass rooms: killing rares adds time',
       'Finish the trial [[1st Ascendancy]]',
-      '> Smith of Kitava: stash a white chest piece first'
+      '> Smith of Kitava: stash a white chest piece first',
+      'Teleport back to town'
     ]},
     { n: 'The Dreadnought', lv: '28–29', s: [
       'Travel to The Dreadnought → kill *Jamanra, the Abomination* (act boss)',
@@ -360,7 +365,7 @@ window.ROUTE = [
       'Teleport to Jungle Ruins'
     ]},
     { n: 'Jungle Ruins (second visit)', s: [
-      'Use the Large Soul Core on the stone altar → opens the way to The Matlan Waterways'
+      'Use the Large Soul Core on the stone altar → enter The Matlan Waterways'
     ]},
     { n: 'The Matlan Waterways', lv: '35', s: [
       '? Narag\'s Hut: kill *Narag of the Vile Word* [Rare weapon] [Blacksmith\'s Whetstone]',
@@ -387,7 +392,8 @@ window.ROUTE = [
       'Find The Molten Vault, take its waypoint, come back',
       '? Drowned Quarters: hidden rooms with rares, gold and chests [Runes]',
       '! Teal drowning orbs block vision and kill if you stay; keep moving',
-      '! A crawler swarm ambushes just after the bridge with the checkpoint'
+      '! A crawler swarm ambushes just after the bridge with the checkpoint',
+      'Teleport to The Molten Vault (first character only; otherwise teleport to town)'
     ]},
     { n: 'The Molten Vault', lv: '36', wp: 1, s: [
       'Kill *Mektul, the Forgemaster* (first character only) [Uncut Skill Gem Lv10] [Artificer\'s Orb]',
@@ -457,7 +463,7 @@ window.ROUTE = [
       'Talk to Doryani, then Alva',
       'Talk to Tujen, accept his quest',
       'Talk to Farrow, accept The Runeseeker quest',
-      'Talk to Makoru on the ship → pick an island'
+      'Talk to Makoru on the ship → sail to Whakapanu Island'
     ]},
     { n: 'Whakapanu Island', lv: '42–43', s: [
       'Petrified Pirate on the coast [Map Piece 1 of 4]',
@@ -469,13 +475,13 @@ window.ROUTE = [
     { n: 'Singing Caverns', wp: 1, s: [
       '? Beckoning Clam → Humming Pearl, give it to Rog',
       'Kill *Diamora, Song of Death (Center of the area)*',
-      '? Back to Kingmarch to speak with Ange → Shoreline Hideout; clear it, talk to Ange again [Hideout]',
+      '? Back to Kingsmarch to speak with Ange → Shoreline Hideout; clear it, talk to Ange again [Hideout]',
       'Sail to Shrike Island'
     ]},
     { n: 'Shrike Island', lv: '43–44', s: [
       'Enter the Corpse Nest cave, usually late in the area with its own checkpoint [Map Piece 2 of 4]',
       'Kill *Scourge of the Skies*',
-      'Talk to The Hooded One → sail to Abandoned Prison'
+      'Talk to The Hooded One → teleport → sail to Abandoned Prison'
     ]},
     { n: 'Abandoned Prison', lv: '44', wp: 1, s: [
       'Kill monsters until the Chapel Key drops',
@@ -572,7 +578,7 @@ window.ROUTE = [
       '? Kill *Isolde & Heldra* (east)',
       'Stones of Serle (south): activate the 6 Runed Megaliths',
       '> This lifts the Darkness sealing the Blackwood entrance (north)',
-      'Go through Blackwood → Holten',
+      'Go north through Blackwood → Holten',
       '? Kill *Godwin & Sigbert* in Holten [Blacksmith\'s Whetstone]',
       '? Soul of the Ferryman at the docks in Holten [Cheap Greater Runes]',
       'Enter Wolvenhold from Holten first → kill *Oswin, the Dread Warden* → use the Warden\'s Ledger [[+2 Skill Points]] [Unique] [Vaal Orb]',
@@ -588,7 +594,7 @@ window.ROUTE = [
       'Enter Sel Khari Sanctuary, take the waypoint',
       '? Two Wishes: put both Baryas on their pedestals [2 rare jewellery]',
       'At the end of the sanctuary, kill *Elzarah, the Cobra Lord*',
-      'Molten Shrine (north-east) → Skullmaw Stairway → Molten One\'s Gift [[+5% Max Life]]',
+      'Back in Khari Crossing, go to Molten Shrine (north-east) → Skullmaw Stairway → Molten One\'s Gift [[+5% Max Life]]',
       '> If the seals bug out, reset the instance',
       'Enter Qimah → Orbala\'s Pillar: pick 1 of 7 boons [[Boon]]',
       '> You can swap the boon later at the pillar',
@@ -601,16 +607,17 @@ window.ROUTE = [
     { n: '5.3 · Kriar', lv: '55–58', s: [
       'Talk to The Hooded One → travel to Mount Kriar → through The Glade into Ashen Forest (no waypoint)',
       'Find the Ancient Monument [Skill Gem]',
-      'Kriar Village: follow the wisps → kill *Lythara, the Wayward Spear* [[+40 Spirit]] [Spirit Gem] [Gemcrust Skull]',
-      'Glacial Tarn → Howling Caves: kill *The Abominable Yeti* → loot the Icy Tusks',
+      'Enter Kriar Village, follow the wisps → kill *Lythara, the Wayward Spear* [[+40 Spirit]] [Spirit Gem] [Gemcrust Skull]',
+      'Enter Glacial Tarn → Howling Caves: kill *The Abominable Yeti* → loot the Icy Tusks',
       'Give the Icy Tusks to Hilda [[+2 Skill Points]]',
       'Back in Glacial Tarn, kill *Rakkar, the Frozen Talon* (north-west) → opens Kriar Peaks',
-      'Kriar Peaks: find Elder Maddox around 10–11 o\'clock [[Free unique]]',
+      'Enter Kriar Peaks → find Elder Maddox around 10–11 o\'clock [[Free unique]]',
       '> Blue spirit owls are nearby',
-      'Etched Ravine: kill *Stormgore, the Guardian* → opens The Cuachic Vault',
+      'Enter Etched Ravine at the far end → kill *Stormgore, the Guardian* → enter The Cuachic Vault',
       '? Open sealed vaults at stone altars with Small Soul Cores [Loot]',
       'Kill *Zolin & Zelina* in The Cuachic Vault',
-      '? One Vaal Beacon per zone (Fate of the Vaal storyline)'
+      '? One Vaal Beacon per zone (Fate of the Vaal storyline)',
+      'Finish the interlude → return to town'
     ]},
     { n: 'Wrap-up', s: [
       'After all 3 interludes, talk to The Hooded One in Kingsmarch [[+2 Skill Points]]',
