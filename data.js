@@ -603,10 +603,11 @@ window.ROUTE = [
       '? Fill the 2 Sacred Wells with Vials of Sacred Water [Currency]',
       '? Click the giant vase → kill *Bloodbilge* [Exalted Orb] [Vaal Orb] [Skill Gem]',
       'Kill *Azmadi, the Faridun Prince* → use the Grand Barya',
-      'Finish the interlude → return to town'
+      'Finish the interlude → return to town',
+      'Talk to The Hooded One → travel to Mount Kriar'
     ]},
     { n: '5.3 · Kriar', lv: '55–58', s: [
-      'Talk to The Hooded One → travel to Mount Kriar → through The Glade into Ashen Forest (no waypoint)',
+      'Go to Ashen Forest through The Glade (no waypoint)',
       'Find the Ancient Monument [Skill Gem]',
       'Enter Kriar Village, follow the wisps → kill *Lythara, the Wayward Spear* [[+40 Spirit]] [Spirit Gem] [Gemcrust Skull]',
       'Enter Glacial Tarn → Howling Caves: kill *The Abominable Yeti* → loot the Icy Tusks',
