@@ -594,7 +594,7 @@ window.ROUTE = [
       'Enter Sel Khari Sanctuary, take the waypoint',
       '? Two Wishes: put both Baryas on their pedestals [2 rare jewellery]',
       'At the end of the sanctuary, kill *Elzarah, the Cobra Lord*',
-      'Back in Khari Crossing, go to Molten Shrine (north-east) → Skullmaw Stairway → Molten One\'s Gift [[+5% Max Life]]',
+      'Back in Khari Crossing, go Skullmaw Stairway (north-east) → Molten One\'s Gift [[+5% Max Life]]',
       '> If the seals bug out, reset the instance',
       'Enter Qimah → Orbala\'s Pillar: pick 1 of 7 boons [[Boon]]',
       '> You can swap the boon later at the pillar',
