@@ -467,7 +467,7 @@ window.ROUTE = [
     ]},
     { n: 'Whakapanu Island', lv: '42–43', s: [
       'Petrified Pirate on the coast [Map Piece 1 of 4]',
-      '? Shark Pit: kill *The Great White One* → Shark Fin',
+      'Shark Pit: kill *The Great White One* → Shark Fin',
       '> Give the fin to Kaimana (at Ngakanu, or on the docks after Tavakai) [Uncut Gem Lv11] [Blessing]',
       '? Crabshell Cavern: kill *Clawcrunch* [Support Gem Lv4]',
       'Enter Singing Caverns'
