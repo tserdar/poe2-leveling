@@ -608,7 +608,7 @@ window.ROUTE = [
     ]},
     { n: '5.3 · Kriar', lv: '55–58', s: [
       'Go to Ashen Forest through The Glade (no waypoint)',
-      'Find the Ancient Monument [Skill Gem]',
+      '? Find the Ancient Monument [Skill Gem]',
       'Enter Kriar Village, follow the wisps → kill *Lythara, the Wayward Spear* [[+40 Spirit]] [Spirit Gem] [Gemcrust Skull]',
       'Enter Glacial Tarn → Howling Caves: kill *The Abominable Yeti* → loot the Icy Tusks',
       'Give the Icy Tusks to Hilda [[+2 Skill Points]]',
