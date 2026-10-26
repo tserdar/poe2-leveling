@@ -573,7 +573,7 @@ window.ROUTE = [
       'Stones of Serle (south): activate the 6 Runed Megaliths',
       '> This lifts the Darkness sealing the Blackwood entrance (north)',
       'Go through Blackwood → Holten',
-      'Kill *Godwin & Sigbert* in Holten [Blacksmith\'s Whetstone]',
+      '? Kill *Godwin & Sigbert* in Holten [Blacksmith\'s Whetstone]',
       '? Soul of the Ferryman at the docks in Holten [Cheap Greater Runes]',
       'Wolvenhold: kill *Oswin, the Dread Warden* → use the Warden\'s Ledger [[+2 Skill Points]] [Unique] [Vaal Orb]',
       'Holten Estate: climb two staircases → kill *Thane Wulfric & Lady Elswyth*',
